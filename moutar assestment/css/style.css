@@ -1,0 +1,281 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+    font-family: 'helvetica', 'sans-serif';
+}
+
+/* Global ----------------------------------------------------------------------- */
+.container {
+    width: 80%;
+    margin: auto; /* move everything to middle */
+    overflow: hidden; /* if something goings out of a div, no need to scroll, so make it hidden instead */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    border: 1px rgb(8, 8, 8, 0.5);
+    background-color: rgb(8, 8, 8, 0.5);
+    padding: 7px 15px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+
+.flex {
+    display: flex;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+    padding: 9px 20px;
+    color: #eee;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.75em;
+    background-color: #000;
+}
+
+img {
+    width: 100%;
+}
+ 
+.button-1 {
+    display: block;
+    width: 95%;
+    height: 25px;
+    background: rgb(218, 216, 216);
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.button-2 {
+    height: 38px;
+    background-color: #000;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+input, textarea {
+    width: 100%;
+    height: 40px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Header */
+header {
+    background: #ffffff;
+    color: #000;
+    padding-top: 10px;
+    min-height: 50px;
+}
+
+header p {
+    font-weight: 100;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+header a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .hightlight, header .current a {
+    color: #000;
+    font-weight: 1000;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* Showcase */
+#showcase {
+    min-height: 600px;
+    background: url('../img/showcase.jpg') no-repeat 0 -400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h2{
+    font-size: 40px;
+    margin-top: 250px;
+    opacity: 0.8;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* Project */
+#projects , #about, #contact, #map{
+    margin: 0 auto;
+    width: 95%;
+}
+#projects .box {
+    width: 340px;
+    height: 250px;
+    margin: 10px 10px;
+
+}
+
+#projects .box.summer {
+    background-image: url(/assets/img/house.jpg);
+    background-size: cover;
+}
+
+#projects .box.brick {
+    background-image: url(/assets/img/brick.jpg);
+    background-size: cover;
+}
+
+#projects .box.renovated {
+    background-image: url(/assets/img/renovated.jpg);
+    background-size: cover;
+}
+
+#projects .box.barn {
+    background-image: url(/assets/img/barn.jpg);
+    background-size: cover;
+}
+
+#projects .box.summer-1 {
+    background-image: url(/assets/img/brick.jpg);
+    background-size: cover;
+}
+
+#projects .box.brick-1 {
+    background-image: url(/assets/img/house.jpg);
+    background-size: cover;
+}
+
+#projects .box.renovated-1 {
+    background-image: url(/assets/img/barn.jpg);
+    background-size: cover;
+}
+
+#projects .box.barn-1 {
+    background-image: url(/assets/img/renovated.jpg);
+    background-size: cover;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* About */
+#about .box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 340px;
+    margin: 10px 10px;
+
+}
+
+#about .box .bottom-part h5{
+    color: #999;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* Map */
+
+#map {
+    margin-bottom: 5px;
+}
+#map .location {
+    height: 800px;
+    width: 100%;
+    background-image: url(/assets/img/map.jpg);
+}
+
+#map .marker {
+    position: relative;
+    top: 417px;
+    left: 215px;
+    border: 3px solid yellow;
+    width: 50px;
+    height: 100px;
+    padding: 9px 20px;
+    display: inline-block;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: #000;
+    text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+    header #branding, 
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h2 {
+        margin-top: 250px;
+    }
+}
